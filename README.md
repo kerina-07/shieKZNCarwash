@@ -27,7 +27,7 @@ Open `index.html` in your browser, or deploy to [GitHub Pages](#deploy-to-github
 carwash-kzn/
 ├── index.html          # Single-page site
 ├── css/
-│   └── style.css       # All styles (no preprocessor needed)
+│   └── style.css       # All styles 
 ├── js/
 │   └── main.js         # Canvas, nav, form, scroll reveal
 └── README.md
@@ -43,13 +43,13 @@ Search `index.html` and `js/main.js` for these placeholders and replace them:
 
 | Placeholder | Where | What to change |
 |---|---|---|
-| `ShineKZN` | nav, footer, `<title>` | Your business name |
-| `27831234567` | WhatsApp links | Your number (country code + digits, no spaces/+) |
-| `hello@shinekzn.co.za` | footer | Your email |
-| `12 Wash Lane, Pinetown` | footer | Your address |
-| `083 123 4567` | footer, booking section | Your display phone number |
-| `2 000+` | hero badge | Your real stat |
-| `4.9★` | about blob | Your Google rating |
+| `ShineKZN` | nav, footer, `<title>` 
+| `27831234567` | WhatsApp links | number (country code + digits, no spaces/+) |
+| `hello@shinekzn.co.za` | footer |  email |
+| `12 Wash Lane, Pinetown` | footer |  address |
+| `083 123 4567` | footer, booking section | display phone number |
+| `2 00+` | hero badge | |
+| `4.9★` | about blob | Google rating |
 
 ### Colours
 
