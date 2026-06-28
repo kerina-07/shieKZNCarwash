@@ -5,17 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShineKZN Car Wash | Durban & KwaZulu-Natal</title>
   <meta name="description" content="Premium car wash services in KwaZulu-Natal. Hand wash, detailing, and more. Serving Durban and surrounding areas." />
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="ShineKZN Car Wash | Durban & KwaZulu-Natal" />
+  <meta property="og:description" content="Professional hand washes, full detailing & valet services in KwaZulu-Natal." />
+  <meta property="og:url" content="https://shinekzn.co.za" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%230D4F5C'>💧</text></svg>" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- Schema.org JSON-LD for Local Business SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ShineKZN",
+    "image": "https://shinekzn.co.za/og-image.jpg",
+    "description": "Premium car wash services in KwaZulu-Natal",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Wash Lane, Pinetown",
+      "addressLocality": "Pinetown",
+      "addressRegion": "KwaZulu-Natal",
+      "postalCode": "3610",
+      "addressCountry": "ZA"
+    },
+    "telephone": "+27831234567",
+    "email": "hello@shinekzn.co.za",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "07:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "08:00",
+        "closes": "15:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/shinekzn",
+      "https://www.instagram.com/shinekzn"
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo">SHINE<span>KZN</span></a>
+      <a href="#home" class="nav__logo">SHINE<span>KZN</span></a>
       <ul class="nav__links">
         <li><a href="#services">Services</a></li>
         <li><a href="#pricing">Pricing</a></li>
@@ -23,11 +72,11 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#booking" class="btn btn--nav">Book Now</a>
-      <button class="nav__burger" id="navBurger" aria-label="Open menu">
+      <button class="nav__burger" id="navBurger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
-    <ul class="nav__mobile" id="navMobile">
+    <ul class="nav__mobile" id="navMobile" hidden>
       <li><a href="#services">Services</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About</a></li>
@@ -39,7 +88,7 @@
   <!-- HERO -->
   <header class="hero" id="home">
     <div class="hero__canvas-wrap">
-      <canvas id="waterCanvas"></canvas>
+      <canvas id="waterCanvas" aria-label="Interactive water ripple animation"></canvas>
     </div>
     <div class="hero__content">
       <p class="hero__eyebrow">KwaZulu-Natal's Premium Car Wash</p>
@@ -70,7 +119,7 @@
   </div>
 
   <!-- TRUST BAR -->
-  <section class="trust">
+  <section class="trust" aria-label="Why customers trust ShineKZN">
     <div class="container trust__grid">
       <div class="trust__item">
         <span class="trust__icon">🌊</span>
@@ -92,14 +141,14 @@
   </section>
 
   <!-- SERVICES -->
-  <section class="services" id="services">
+  <section class="services" id="services" aria-labelledby="services-heading">
     <div class="container">
-      <h2 class="section-title">What We Offer</h2>
+      <h2 class="section-title" id="services-heading">What We Offer</h2>
       <p class="section-sub">From a quick rinse to a full luxury detail — we've got your car covered.</p>
       <div class="services__grid">
 
         <div class="service-card service-card--accent">
-          <div class="service-card__icon">💧</div>
+          <div class="service-card__icon" aria-hidden="true">💧</div>
           <h3>Express Wash</h3>
           <p>A quick exterior rinse, hand dry and window clean. In &amp; out in under 20 minutes.</p>
           <ul>
@@ -110,7 +159,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-card__icon">🚿</div>
+          <div class="service-card__icon" aria-hidden="true">🚿</div>
           <h3>Full Valet</h3>
           <p>Inside and out — the works. Vacuumed, wiped, waxed and smelling brand new.</p>
           <ul>
@@ -122,7 +171,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-card__icon">✨</div>
+          <div class="service-card__icon" aria-hidden="true">✨</div>
           <h3>Premium Detail</h3>
           <p>The full luxury treatment. Paint correction, leather conditioning, and engine bay clean.</p>
           <ul>
@@ -135,7 +184,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-card__icon">🛡️</div>
+          <div class="service-card__icon" aria-hidden="true">🛡️</div>
           <h3>Ceramic Coating</h3>
           <p>Long-lasting protection against KZN's harsh sun, salt air &amp; coastal humidity.</p>
           <ul>
@@ -147,7 +196,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-card__icon">🧹</div>
+          <div class="service-card__icon" aria-hidden="true">🧹</div>
           <h3>Interior Deep Clean</h3>
           <p>Steam cleaning, stain removal and sanitisation — perfect after the kids or a road trip.</p>
           <ul>
@@ -158,7 +207,7 @@
         </div>
 
         <div class="service-card">
-          <div class="service-card__icon">🚗</div>
+          <div class="service-card__icon" aria-hidden="true">🚗</div>
           <h3>Mobile Wash</h3>
           <p>We come to you — home, office, or wherever in KZN. Same quality, zero travel on your part.</p>
           <ul>
@@ -173,11 +222,11 @@
   </section>
 
   <!-- PRICING -->
-  <section class="pricing" id="pricing">
+  <section class="pricing" id="pricing" aria-labelledby="pricing-heading">
     <div class="container">
-      <h2 class="section-title section-title--light">Clear Pricing</h2>
+      <h2 class="section-title section-title--light" id="pricing-heading">Clear Pricing</h2>
       <p class="section-sub section-sub--light">No surprises. Prices include VAT.</p>
-      <div class="pricing__grid">
+      <div class="pricing__grid" role="region" aria-label="Service pricing options">
 
         <div class="pricing-card">
           <h3 class="pricing-card__name">Express</h3>
@@ -227,7 +276,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="about" id="about">
+  <section class="about" id="about" aria-labelledby="about-heading">
     <div class="container about__inner">
       <div class="about__visual" aria-hidden="true">
         <div class="about__blob">
@@ -237,9 +286,9 @@
         </div>
       </div>
       <div class="about__text">
-        <h2 class="section-title">Born &amp; Raised<br />in KZN</h2>
+        <h2 class="section-title" id="about-heading">Born &amp; Raised<br />in KZN</h2>
         <p>ShineKZN started in 2019 out of a single yard in Pinetown with one pressure washer and a lot of pride. Today we serve customers across Durban, Umhlanga, Ballito, Hillcrest, and beyond.</p>
-        <p>We know KwaZulu-Natal's conditions better than anyone — the coastal salt air, the midlands dust, the subtropical rain. Our products and techniques are chosen specifically for the KZN climate to keep your car protected all year round.</p>
+        <p>We know KwaZulu-Natal's conditions better than anyone — the coastal salt air, the midlands dust, the subtropical rain. Our products and techniques are chosen specifically for the KZN climate. We use only eco-friendly, biodegradable solutions that won't harm your local ecosystem.</p>
         <p>Every car is treated as if it's our own. We don't cut corners, we don't rush, and we don't hand your keys back until we're 100% happy with the result.</p>
         <a href="#contact" class="btn btn--primary">Get in Touch</a>
       </div>
@@ -247,10 +296,10 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="testimonials">
+  <section class="testimonials" aria-labelledby="testimonials-heading">
     <div class="container">
-      <h2 class="section-title">What Our Customers Say</h2>
-      <div class="testimonials__grid">
+      <h2 class="section-title" id="testimonials-heading">What Our Customers Say</h2>
+      <div class="testimonials__grid" role="region" aria-label="Customer testimonials">
         <div class="testimonial">
           <p>"I've been taking my Golf here every two weeks. The finish is always immaculate. Best car wash in Durban North, no question."</p>
           <cite>— Thandi M., Durban North</cite>
@@ -268,25 +317,42 @@
   </section>
 
   <!-- BOOKING -->
-  <section class="booking" id="booking">
+  <section class="booking" id="booking" aria-labelledby="booking-heading">
     <div class="container">
-      <h2 class="section-title section-title--light">Book a Wash</h2>
+      <h2 class="section-title section-title--light" id="booking-heading">Book a Wash</h2>
       <p class="section-sub section-sub--light">Fill in the form and we'll confirm your booking via WhatsApp within the hour.</p>
       <form class="booking__form" id="bookingForm" novalidate>
         <div class="form-row">
           <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="e.g. Sipho Nkosi" required />
+            <label for="name">Your Name <span aria-label="required">*</span></label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              placeholder="e.g. Sipho Nkosi" 
+              required 
+              aria-required="true"
+            />
+            <span class="form-error" id="name-error" role="alert"></span>
           </div>
           <div class="form-group">
-            <label for="phone">WhatsApp Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="e.g. 083 555 1234" required />
+            <label for="phone">WhatsApp Number <span aria-label="required">*</span></label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              placeholder="e.g. 083 555 1234" 
+              required 
+              aria-required="true"
+              pattern="[0-9\s]+"
+            />
+            <span class="form-error" id="phone-error" role="alert"></span>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="service">Service</label>
-            <select id="service" name="service" required>
+            <label for="service">Service <span aria-label="required">*</span></label>
+            <select id="service" name="service" required aria-required="true">
               <option value="">Select a service…</option>
               <option>Express Wash</option>
               <option>Full Valet</option>
@@ -295,37 +361,56 @@
               <option>Interior Deep Clean</option>
               <option>Mobile Wash</option>
             </select>
+            <span class="form-error" id="service-error" role="alert"></span>
           </div>
           <div class="form-group">
-            <label for="vehicle">Vehicle Type</label>
-            <select id="vehicle" name="vehicle" required>
+            <label for="vehicle">Vehicle Type <span aria-label="required">*</span></label>
+            <select id="vehicle" name="vehicle" required aria-required="true">
               <option value="">Select vehicle…</option>
               <option>Sedan / Hatchback</option>
               <option>SUV / Crossover</option>
               <option>Bakkie / Truck</option>
               <option>Minibus / Kombi</option>
             </select>
+            <span class="form-error" id="vehicle-error" role="alert"></span>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="date">Preferred Date</label>
-            <input type="date" id="date" name="date" required />
+            <label for="date">Preferred Date <span aria-label="required">*</span></label>
+            <input 
+              type="date" 
+              id="date" 
+              name="date" 
+              required 
+              aria-required="true"
+            />
+            <span class="form-error" id="date-error" role="alert"></span>
           </div>
           <div class="form-group">
             <label for="location">Your Area / Location</label>
-            <input type="text" id="location" name="location" placeholder="e.g. Ballito, Pinetown…" />
+            <input 
+              type="text" 
+              id="location" 
+              name="location" 
+              placeholder="e.g. Ballito, Pinetown…" 
+            />
           </div>
         </div>
         <div class="form-group form-group--full">
-          <label for="notes">Any Notes? (optional)</label>
-          <textarea id="notes" name="notes" rows="3" placeholder="Specific stains, scratch concerns, etc."></textarea>
+          <label for="notes">Any Notes? <span aria-label="optional">(optional)</span></label>
+          <textarea 
+            id="notes" 
+            name="notes" 
+            rows="3" 
+            placeholder="Specific stains, scratch concerns, etc."
+          ></textarea>
         </div>
         <button type="submit" class="btn btn--primary btn--lg">Send Booking Request</button>
-        <p class="booking__whatsapp">Or message us directly on <a href="https://wa.me/27831234567" target="_blank" rel="noopener">WhatsApp: 083 123 4567</a></p>
+        <p class="booking__whatsapp">Or message us directly on <a href="https://wa.me/27831234567" target="_blank" rel="noopener noreferrer">WhatsApp: 083 123 4567</a></p>
       </form>
-      <div class="booking__success" id="bookingSuccess" hidden>
-        <span>✅</span>
+      <div class="booking__success" id="bookingSuccess" role="status" aria-live="polite" hidden>
+        <span aria-hidden="true">✅</span>
         <h3>Booking request received!</h3>
         <p>We'll confirm via WhatsApp shortly. See you soon!</p>
       </div>
@@ -336,12 +421,12 @@
   <footer class="footer" id="contact">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#" class="nav__logo nav__logo--footer">SHINE<span>KZN</span></a>
+        <a href="#home" class="nav__logo nav__logo--footer">SHINE<span>KZN</span></a>
         <p>Premium car wash &amp; detailing services across KwaZulu-Natal.</p>
         <div class="footer__social">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="https://wa.me/27831234567" aria-label="WhatsApp">wa</a>
+          <a href="https://www.facebook.com/shinekzn" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">f</a>
+          <a href="https://www.instagram.com/shinekzn" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile">ig</a>
+          <a href="https://wa.me/27831234567" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">wa</a>
         </div>
       </div>
       <div class="footer__links">
@@ -356,9 +441,11 @@
       </div>
       <div class="footer__contact">
         <h4>Find Us</h4>
-        <p>📍 12 Wash Lane, Pinetown<br />KwaZulu-Natal, 3610</p>
-        <p>📞 <a href="tel:+27831234567">083 123 4567</a></p>
-        <p>✉️ <a href="mailto:hello@shinekzn.co.za">hello@shinekzn.co.za</a></p>
+        <address>
+          <p>📍 12 Wash Lane, Pinetown<br />KwaZulu-Natal, 3610</p>
+          <p>📞 <a href="tel:+27831234567">083 123 4567</a></p>
+          <p>✉️ <a href="mailto:hello@shinekzn.co.za">hello@shinekzn.co.za</a></p>
+        </address>
         <p>🕐 Mon–Sat: 7am – 6pm<br />Sunday: 8am – 3pm</p>
       </div>
     </div>
